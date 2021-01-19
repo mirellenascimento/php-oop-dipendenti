@@ -1,19 +1,61 @@
 <?php
 require_once ('impiegato.php');
 
-$mirelle = new ImpiegatoSalariato("Mirelle", "Nascimento", "ABC12345678", 1);
-$mirelle->giorni_lavorati = 20;
-$mirelle->compenso_giornaliero = 80;
+//Impiedato Salariato
+$personalMirelle = [
+  'nome' => 'Mirelle',
+  'cognome' => 'Nascimento',
+  'codice_fiscale' => 'ABC12345678DEF',
+  'codice_impiegato' => 1
+];
+
+$comissioneMirelle = [
+  'giorni_lavorati' => 20,
+  'compenso_giornaliero' => 100
+];
+
+$dataMirelle = array_merge($personalMirelle, $comissioneMirelle);
+
+$mirelle = new ImpiegatoSalariato($dataMirelle);
 $mirelle->to_string();
 
-$maria = new ImpiegatoAOre("Maria", "Bezerra", "DEF12345678", 2);
-$maria->ore_lavorate = 160;
-$maria->compenso_orario = 12;
-$maria->to_string();
 
-$mayara = new ImpiegatoSuCommissione("Mayara", "Millane", "GHI12345678", 3);
-$mayara->commissione = 2500;
+//Impriedato su Commissione
+$personalMayara = [
+  'nome' => 'Mayara',
+  'cognome' => 'Millane',
+  'codice_fiscale' => 'DEF12345678GHI',
+  'codice_impiegato' => 2
+];
+
+$comissioneMayara = [
+  'nome_progetto' => 'Mio progetto',
+  'commissione' => 1500
+];
+
+$dataMayara = array_merge($personalMayara, $comissioneMayara);
+
+$mayara = new ImpiegatoSuCommissione($dataMayara);
 $mayara->to_string();
+
+
+//Impiedato a Ore
+$personalMaria = [
+  'nome' => 'Maria',
+  'cognome' => 'do Carmo',
+  'codice_fiscale' => 'GHI12345678JKL',
+  'codice_impiegato' => 3
+];
+
+$comissioneMaria = [
+  'ore_lavorate' => 160,
+  'compenso_orario' => 12
+];
+
+$dataMaria = array_merge($personalMaria, $comissioneMaria);
+
+$maria = new ImpiegatoAOre($dataMaria);
+$maria->to_string();
 
 
 ?>
