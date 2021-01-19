@@ -1,11 +1,17 @@
 <?php
+require_once ('persona.php');
 require_once ('impiegato.php');
+require_once ('salariato.php');
+require_once ('su_commissione.php');
+require_once ('a_ore.php');
+
+
 
 //Impiedato Salariato
 $personalMirelle = [
   'nome' => 'Mirelle',
   'cognome' => 'Nascimento',
-  'codice_fiscale' => 'ABC12345678DEF',
+  'codice_fiscale' => 'ABC1234567890DEF',
   'codice_impiegato' => 1
 ];
 
@@ -24,7 +30,7 @@ $mirelle->to_string();
 $personalMayara = [
   'nome' => 'Mayara',
   'cognome' => 'Millane',
-  'codice_fiscale' => 'DEF12345678GHI',
+  'codice_fiscale' => 'DEF1234567890GHI',
   'codice_impiegato' => 2
 ];
 
@@ -43,7 +49,7 @@ $mayara->to_string();
 $personalMaria = [
   'nome' => 'Maria',
   'cognome' => 'do Carmo',
-  'codice_fiscale' => 'GHI12345678JKL',
+  'codice_fiscale' => 'GHI1234567890JKL',
   'codice_impiegato' => 3
 ];
 
